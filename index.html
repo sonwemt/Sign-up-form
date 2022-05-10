@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="left-background">
@@ -14,8 +15,10 @@
             <img src="images/logo.png" alt="odin-logo" class="card-logo">
             <p class="card-text">Odin</p>
         </div>
+        <p class="footer">Photo by Leon Bredella on <a href="https://unsplash.com/photos/Km1u6Cya6AM">Unsplash</a></p>
+
     </div>
-    <div class="right-container">
+    <form action="#" method="post">
         <div class="header">
             <p>
                 This is not a real online service! You know you need something like this in your life to help
@@ -24,37 +27,36 @@
             <p>You know you want to.</p>
         </div>
         <div class="inputwrapper">
-            <div class="inputheader">
-                Lets do this!
-            </div>
+            <div class="inputheader">Lets do this!</div>
             <div class="col">
                 <div>
                     <label for="firstname">First name</label>
-                    <input type="text" id="firstname">
+                    <input type="text" id="firstname" name="firstname" minlength="2" maxlength="20" placeholder=" " required>
                 </div>
                 <div>
                     <label for="lastname">Last name</label>
-                    <input type="text" id="lastname">
+                    <input type="text" id="lastname" name="lastname" minlength="2" maxlength="20" placeholder=" " required>
                 </div>
             </div>
             <div class="col">
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" id="email">
+                    <input type="email" id="email" name="email" minlength="5" maxlength="60" placeholder=" " required>
                 </div>
                 <div>
                     <label for="phonenumber">Phone number</label>
-                    <input type="integer" id="phone">
+                    <input type="number" id="phonenumber" name="phonenumber" placeholder=" " required>
                 </div>
             </div>
             <div class="col">
                 <div>
-                    <label for="password">Password</label>
-                    <input type="text" id="password">
+                    <label for="userpassword">Password</label>
+                    <input type="password" id="userpassword" name="userpassword" placeholder=" " required>
+                    <div class="matcherror">*Passwords do not match</div>
                 </div>
                 <div>
                     <label for="confirmpassword">Confirm Password</label>
-                    <input type="text" id="confirmpassword">
+                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder=" " required>
                 </div>
             </div>
         </div>
@@ -64,6 +66,6 @@
             </div>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
-    </div>
+    </form>
 </body>
 </html>
