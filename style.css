@@ -168,6 +168,10 @@ input:not(:placeholder-shown):valid{
 	border: 0;
 }
 
+.submit button:hover {
+	color:white;
+}
+
 .submit button:active{
 	color:white;
 	background-color: black;
